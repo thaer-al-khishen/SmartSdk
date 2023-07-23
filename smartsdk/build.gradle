@@ -51,9 +51,11 @@ publishing {
         release(MavenPublication) {
             groupId 'com.example'
             artifactId 'smartsdk'
-            version '1.0.0'
+            version = '0.0.1'
 
-            artifact("$buildDir/outputs/aar/smartsdk.aar")
+            afterEvaluate {
+                from components.release
+            }
         }
     }
 }
