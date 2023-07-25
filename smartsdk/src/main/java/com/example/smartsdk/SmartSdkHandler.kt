@@ -1,19 +1,23 @@
 package com.example.smartsdk
 
+import android.app.Activity
 import com.example.smartsdk.SmartSdkConsts.DEFAULT_VALUE
 
 object SmartSdkHandler: BaseSmartSdkHandler<SmartSdkHandler.BaseSdkHandler>() {
 
+    var homeScreenOutput = ""
+
     interface HomeScreenHandler {
         fun provideSmartSdkText(): String = DEFAULT_VALUE
-        fun getStringFromSdk(returnString: String) {}
+        fun interceptHomeNextPageButtonActionWithActivity() : Class<out Activity>? = null
+
     }
 
-    interface DetailScreenHandler {
-        fun provideDetailScreenData(): String = DEFAULT_VALUE
+    interface ListScreenHandler {
+        fun onNextPageButtonClickedFromListScreen() = Unit
     }
 
     // Unified SdkHandler interface
-    interface BaseSdkHandler : HomeScreenHandler, DetailScreenHandler
+    interface BaseSdkHandler : HomeScreenHandler, ListScreenHandler
 
 }

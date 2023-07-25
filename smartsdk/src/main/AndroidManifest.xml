@@ -3,6 +3,9 @@
 
     <application>
         <activity
+            android:name=".DefaultActivity"
+            android:exported="false" />
+        <activity
             android:name=".SmartSdkActivity"
             android:exported="false" />
     </application>

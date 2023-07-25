@@ -6,26 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".SmartSdkActivity">
 
-    <TextView
-        android:id="@+id/tv_smart_sdk_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/smart_sdk_nav_controller"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:gravity="center"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_sdk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"
-        android:text="Sdk Button"
-        android:textColor="#FFFFFF"
-        android:background="#0000FF"
-        app:layout_constraintTop_toBottomOf="@id/tv_smart_sdk_text"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tv_smart_sdk_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:gravity="center"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_sdk"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:text="Sdk Button"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:background="#0000FF"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_smart_sdk_text"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
