@@ -38,19 +38,19 @@ class MainActivity : AppCompatActivity() {
                 val constraints = ViewConstraintsWrapper(
                     startConstraint = StartConstraintWrapper(
                         StartConstraintModifiers.START_TO_START_OF,
-                        fragmentHomeBinding.clParent
+                        fragmentHomeBinding.clRoot
                     ),
                     topConstraint = TopConstraintWrapper(
                         TopConstraintModifiers.TOP_TO_TOP_OF,
-                        fragmentHomeBinding.clParent
+                        fragmentHomeBinding.clRoot
                     ),
                     bottomConstraint = BottomConstraintWrapper(
                         BottomConstraintModifiers.BOTTOM_TO_BOTTOM_OF,
-                        fragmentHomeBinding.clParent
+                        fragmentHomeBinding.clRoot
                     ),
                     endConstraint = EndConstraintWrapper(
                         EndConstraintModifiers.END_TO_END_OF,
-                        fragmentHomeBinding.clParent
+                        fragmentHomeBinding.clRoot
                     ),
                     margins = Margins(top = 20f)
                 )
