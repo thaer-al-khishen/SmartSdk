@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.smartsdk.databinding.FragmentHomeBinding
+import com.example.smartsdk.wrappers.applyNewConstraints
 
 class HomeFragment : Fragment() {
 
@@ -27,10 +28,19 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
+
             tvHome.text = SmartSdkHandler.getInterface()?.provideSmartSdkText()
+
             btnHomeNextPage.setOnClickListener {
                 HomeScreenHandler.getInterface()?.onNextPageButtonClickedFromHomeScreen()
             }
+
+            SmartSdkHandler.getInterface()?.provideTextViewConfiguration(binding.tvHome, binding)?.run {
+                    this.viewConstraintsWrapper?.run {
+                        binding.tvHome.applyNewConstraints(this)
+                    }
+                }
+
         }
     }
 

@@ -1,8 +1,8 @@
 package com.example.smartsdk
 
-object HomeScreenHandler: BaseSmartSdkHandler<HomeScreenHandler.HomeScreenActions>() {
+internal object HomeScreenHandler: BaseSmartSdkHandler<HomeScreenHandler.HomeScreenActions>() {
 
-    interface HomeScreenActions {
+    internal interface HomeScreenActions {
         fun onNextPageButtonClickedFromHomeScreen() = Unit
     }
 
